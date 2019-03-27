@@ -1,0 +1,746 @@
+--- !ruby/object:ActiveRecord::ConnectionAdapters::SchemaCache
+columns:
+  schema_migrations:
+  - &37 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: version
+    table_name: schema_migrations
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &1 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: character varying
+        type: :string
+        limit:
+        precision:
+        scale:
+      type_metadata: *1
+      oid: 1043
+      fmod: -1
+      array: false
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  ar_internal_metadata:
+  - &38 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: key
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &2 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: character varying
+        type: :string
+        limit:
+        precision:
+        scale:
+      type_metadata: *2
+      oid: 1043
+      fmod: -1
+      array: false
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - &39 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: value
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &3 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: character varying
+        type: :string
+        limit:
+        precision:
+        scale:
+      type_metadata: *3
+      oid: 1043
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &40 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: created_at
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &4 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: timestamp without time zone
+        type: :datetime
+        limit:
+        precision:
+        scale:
+      type_metadata: *4
+      oid: 1114
+      fmod: -1
+      array: false
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - &41 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: updated_at
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &5 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: timestamp without time zone
+        type: :datetime
+        limit:
+        precision:
+        scale:
+      type_metadata: *5
+      oid: 1114
+      fmod: -1
+      array: false
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  users:
+  - &42 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: id
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &6 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *6
+      oid: 20
+      fmod: -1
+      array: false
+    'null': false
+    default:
+    default_function: nextval('users_id_seq'::regclass)
+    collation:
+    comment:
+  - &43 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: name
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &7 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: character varying
+        type: :string
+        limit:
+        precision:
+        scale:
+      type_metadata: *7
+      oid: 1043
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &44 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: created_at
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &8 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: timestamp without time zone
+        type: :datetime
+        limit:
+        precision:
+        scale:
+      type_metadata: *8
+      oid: 1114
+      fmod: -1
+      array: false
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - &45 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: updated_at
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &9 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: timestamp without time zone
+        type: :datetime
+        limit:
+        precision:
+        scale:
+      type_metadata: *9
+      oid: 1114
+      fmod: -1
+      array: false
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  posts:
+  - &46 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: id
+    table_name: posts
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &10 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *10
+      oid: 20
+      fmod: -1
+      array: false
+    'null': false
+    default:
+    default_function: nextval('posts_id_seq'::regclass)
+    collation:
+    comment:
+  - &47 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: user_id
+    table_name: posts
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &11 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *11
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &48 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: created_at
+    table_name: posts
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &12 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: timestamp without time zone
+        type: :datetime
+        limit:
+        precision:
+        scale:
+      type_metadata: *12
+      oid: 1114
+      fmod: -1
+      array: false
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - &49 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: updated_at
+    table_name: posts
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &13 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: timestamp without time zone
+        type: :datetime
+        limit:
+        precision:
+        scale:
+      type_metadata: *13
+      oid: 1114
+      fmod: -1
+      array: false
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  pg_stat_statements:
+  - &50 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: userid
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &14 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: oid
+        type: :oid
+        limit:
+        precision:
+        scale:
+      type_metadata: *14
+      oid: 26
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &51 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: dbid
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &15 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: oid
+        type: :oid
+        limit:
+        precision:
+        scale:
+      type_metadata: *15
+      oid: 26
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &52 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: queryid
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &16 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *16
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &53 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: query
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &17 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: text
+        type: :text
+        limit:
+        precision:
+        scale:
+      type_metadata: *17
+      oid: 25
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &54 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: calls
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &18 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *18
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &55 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: total_time
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &19 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: double precision
+        type: :float
+        limit:
+        precision:
+        scale:
+      type_metadata: *19
+      oid: 701
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &56 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: min_time
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &20 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: double precision
+        type: :float
+        limit:
+        precision:
+        scale:
+      type_metadata: *20
+      oid: 701
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &57 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: max_time
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &21 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: double precision
+        type: :float
+        limit:
+        precision:
+        scale:
+      type_metadata: *21
+      oid: 701
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &58 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: mean_time
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &22 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: double precision
+        type: :float
+        limit:
+        precision:
+        scale:
+      type_metadata: *22
+      oid: 701
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &59 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: stddev_time
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &23 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: double precision
+        type: :float
+        limit:
+        precision:
+        scale:
+      type_metadata: *23
+      oid: 701
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &60 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: rows
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &24 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *24
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &61 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: shared_blks_hit
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &25 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *25
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &62 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: shared_blks_read
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &26 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *26
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &63 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: shared_blks_dirtied
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &27 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *27
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &64 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: shared_blks_written
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &28 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *28
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &65 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: local_blks_hit
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &29 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *29
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &66 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: local_blks_read
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &30 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *30
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &67 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: local_blks_dirtied
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &31 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *31
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &68 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: local_blks_written
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &32 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *32
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &69 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: temp_blks_read
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &33 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *33
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &70 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: temp_blks_written
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &34 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      type_metadata: *34
+      oid: 20
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &71 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: blk_read_time
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &35 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: double precision
+        type: :float
+        limit:
+        precision:
+        scale:
+      type_metadata: *35
+      oid: 701
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - &72 !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+    name: blk_write_time
+    table_name: pg_stat_statements
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      delegate_dc_obj: &36 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: double precision
+        type: :float
+        limit:
+        precision:
+        scale:
+      type_metadata: *36
+      oid: 701
+      fmod: -1
+      array: false
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+columns_hash:
+  schema_migrations:
+    version: *37
+  ar_internal_metadata:
+    key: *38
+    value: *39
+    created_at: *40
+    updated_at: *41
+  users:
+    id: *42
+    name: *43
+    created_at: *44
+    updated_at: *45
+  posts:
+    id: *46
+    user_id: *47
+    created_at: *48
+    updated_at: *49
+  pg_stat_statements:
+    userid: *50
+    dbid: *51
+    queryid: *52
+    query: *53
+    calls: *54
+    total_time: *55
+    min_time: *56
+    max_time: *57
+    mean_time: *58
+    stddev_time: *59
+    rows: *60
+    shared_blks_hit: *61
+    shared_blks_read: *62
+    shared_blks_dirtied: *63
+    shared_blks_written: *64
+    local_blks_hit: *65
+    local_blks_read: *66
+    local_blks_dirtied: *67
+    local_blks_written: *68
+    temp_blks_read: *69
+    temp_blks_written: *70
+    blk_read_time: *71
+    blk_write_time: *72
+primary_keys:
+  schema_migrations: version
+  ar_internal_metadata: key
+  users: id
+  posts: id
+  pg_stat_statements:
+data_sources:
+  schema_migrations: true
+  ar_internal_metadata: true
+  users: true
+  posts: true
+  pg_stat_statements: true
+version: 20190327162922
